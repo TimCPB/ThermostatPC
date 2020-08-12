@@ -25,4 +25,5 @@ class Thermostat {
   switchPowerSaveMode(){
     this.powerSaveMode = !this.powerSaveMode;
   }
+  
 }
