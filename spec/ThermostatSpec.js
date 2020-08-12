@@ -53,4 +53,11 @@ describe("Thermostat", function() {
     thermostat.reset()
     expect(thermostat.currentTemperature).toEqual(20);
   })
+
+  it ("returns 'green' when temp is below 18", function (){
+    for(let i = 0; i < 3; i++){
+      thermostat.down()
+    }
+    expect(thermostat.currentUsage()).toEqual("green")
+  })
 });

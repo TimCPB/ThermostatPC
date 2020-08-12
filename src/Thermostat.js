@@ -29,4 +29,14 @@ class Thermostat {
   reset(){
     this.currentTemperature = 20;
   }
+
+  currentUsage(){
+    if(this.currentTemperature < 18){
+      return "green"
+    } else if(this.currentTemperature > 25){
+      return "red"
+    } else {
+      return "black"
+    };
+  }
 }
