@@ -25,4 +25,11 @@ describe("Thermostat", function() {
     }
     expect(thermostat.defaultTemperature).toEqual(10);
   });
+
+  it ("power saving mode prevents temp rise above 25", function(){
+    for(let i = 0; i < 6; i++){
+      thermostat.up()
+    }
+    expect(thermostat.defaultTemperature).toEqual(25);
+  });
 });
