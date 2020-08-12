@@ -60,4 +60,10 @@ describe("Thermostat", function() {
     }
     expect(thermostat.currentUsage()).toEqual("green")
   })
+  it ("returns 'black' when temp is between 18-25", function (){
+    for(let i = 0; i < 3; i++){
+      thermostat.down()
+    }
+    expect(thermostat.currentUsage()).toEqual("green")
+  })
 });
