@@ -38,10 +38,11 @@ describe("Thermostat", function() {
     expect(thermostat.powerSaveMode).toEqual(false);
   })
 
-  // it ("has a max temp of 32 degrees", function(){
-  //   for(let i = 0; i < 13; i++){
-  //     thermostat.up()
-  //   }
-  //   expect(thermostat.currentTemperature).toEqual(32);
-  // });
+  it ("has a max temp of 32 degrees", function(){
+    thermostat.switchPowerSaveMode
+    for(let i = 0; i < 13; i++){
+      thermostat.up()
+    }
+    expect(thermostat.currentTemperature).toEqual(32);
+  });
 });
