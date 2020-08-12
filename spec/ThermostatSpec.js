@@ -39,7 +39,7 @@ describe("Thermostat", function() {
   })
 
   it ("has a max temp of 32 degrees", function(){
-    thermostat.switchPowerSaveMode
+    thermostat.switchPowerSaveMode()
     for(let i = 0; i < 13; i++){
       thermostat.up()
     }
