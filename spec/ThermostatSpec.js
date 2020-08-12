@@ -32,4 +32,11 @@ describe("Thermostat", function() {
     }
     expect(thermostat.currentTemperature).toEqual(25);
   });
+
+  it ("has a max temp of 32 degrees", function(){
+    for(let i = 0; i < 13; i++){
+      thermostat.up()
+    }
+    expect(thermostat.currentTemperature).toEqual(32);
+  });
 });
