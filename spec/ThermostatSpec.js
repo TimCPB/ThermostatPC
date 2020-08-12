@@ -33,6 +33,11 @@ describe("Thermostat", function() {
     expect(thermostat.currentTemperature).toEqual(25);
   });
 
+  it ("power save mode can be turned off", function(){
+    thermostat.switchPowerSaveMode()
+    expect(thermostat.powerSaveMode).toEqual(false);
+  })
+
   // it ("has a max temp of 32 degrees", function(){
   //   for(let i = 0; i < 13; i++){
   //     thermostat.up()
