@@ -18,4 +18,11 @@ describe("Thermostat", function() {
     thermostat.down()
     expect(thermostat.defaultTemperature).toEqual(19);
   });
+
+  it ("has a min temperture of 10", function() {
+    for(let i = 0; i < 11; i++){
+    thermostat.down()
+    }
+    expect(thermostat.defaultTemperature).toEqual(10);
+  });
 });
