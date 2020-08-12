@@ -4,6 +4,10 @@ class Thermostat {
   };
 
   up(){
-    this.defaultTemperature++
+    this.defaultTemperature++;
+  }
+
+  down(){
+    this.defaultTemperature--;
   }
 }
