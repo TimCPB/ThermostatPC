@@ -17,4 +17,8 @@ class Thermostat {
     this.currentTemperature--;
     }
   }
+
+  switchPowerSaveMode(){
+    this.powerSaveMode = !this.powerSaveMode;
+  }
 }
