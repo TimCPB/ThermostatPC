@@ -1,5 +1,5 @@
 class Thermostat {
   constructor(){
-    this.currentTemperature = 20
+    this.defaultTemperature = 20
   };
 }
