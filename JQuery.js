@@ -5,4 +5,8 @@ $( document ).ready(function() {
   $( "#temperature-down" ).click(function( event ) {
       alert( "It's getting cooler!" );
   });
+
+  $("#current-temp").css("color", "red")
+
+ 
  });
