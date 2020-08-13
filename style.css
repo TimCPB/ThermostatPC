@@ -1,4 +1,8 @@
-body {text-align: center;}
+body {
+  text-align: center;
+  font-size: x-large;
+      
+}
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -22,7 +26,7 @@ body {text-align: center;}
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #130535ce;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -40,11 +44,11 @@ body {text-align: center;}
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #063023ce;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #130535ce;
 }
 
 input:checked + .slider:before {
@@ -60,4 +64,19 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+button {
+  background-color: #130535ce;
+  color: #FFFFFF;
+  padding: 10px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin:10px
+}
+
+
+.current-temp{
+  font-size: x-large;
 }

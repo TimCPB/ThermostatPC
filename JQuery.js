@@ -9,7 +9,7 @@ $( document ).ready(function() {
   $("#current-temp").css("color", "red")
 
   $("#powersaving-switch").click(function(event){
-    $(this).css("color", "green")
+    $(this).css("color", "black")
   })
  
  });
