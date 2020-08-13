@@ -4,16 +4,18 @@ $( document ).ready(function() {
   
   $( "#temperature-up" ).click(function( event ) {
       thermostat.up();
-      $('#temperature').text(thermostat.currentTemperature);
+      // $('#temperature').text(thermostat.currentTemperature);
+      updateTemperature()
   });
   $( "#temperature-down" ).click(function( event ) {
       thermostat.down();
-      $('#temperature').text(thermostat.currentTemperature);
+      // $('#temperature').text(thermostat.currentTemperature);
+      updateTemperature()
   });
 
   $( "#temperature-reset" ).click(function(event){
       thermostat.reset();
-      $('#temperature').text(thermostat.currentTemperature);
+      updateTemperature();
   })
 
   $("#powersaving-switch").click(function(event){
@@ -27,5 +29,11 @@ $( document ).ready(function() {
       event.preventDefault()
       console.log(thermostat.powerSaveMode)
   })
- 
+
+  function updateTemperature(){
+      $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
+    }
+
  });
+
+
