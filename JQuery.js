@@ -6,7 +6,7 @@ $( document ).ready(function() {
       alert( "It's getting cooler!" );
   });
 
-  $("#current-temp").css("color", "red")
+  $("#temperature").css("color", "red")
 
   $("#powersaving-switch").click(function(event){
     $(this).css("color", "black")
