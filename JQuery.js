@@ -24,6 +24,8 @@ $( document ).ready(function() {
 
   $(".switch").click(function(event){
       thermostat.switchPowerSaveMode();
+      event.preventDefault()
+      console.log(thermostat.powerSaveMode)
   })
  
  });
