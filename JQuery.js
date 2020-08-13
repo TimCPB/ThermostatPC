@@ -11,6 +11,11 @@ $( document ).ready(function() {
       $('#temperature').text(thermostat.currentTemperature);
   });
 
+  $( "#temperature-reset" ).click(function(event){
+      thermostat.reset();
+      $('#temperature').text(thermostat.currentTemperature);
+  })
+
   $("#temperature").css("color", "red")
 
   $("#powersaving-switch").click(function(event){
