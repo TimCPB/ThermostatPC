@@ -16,13 +16,14 @@ $( document ).ready(function() {
       $('#temperature').text(thermostat.currentTemperature);
   })
 
-  $("#temperature").css("color", "red")
-
   $("#powersaving-switch").click(function(event){
     $(this).css("color", "black")
   })
 
-  $( "#temperature")
+  // when switch is clicked turn the text colour blue.
 
+  $(".switch").click(function(event){
+      thermostat.switchPowerSaveMode();
+  })
  
  });
