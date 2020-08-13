@@ -1,9 +1,14 @@
 $( document ).ready(function() {
+    var thermostat = new Thermostat()
+    $('#temperature').text(thermostat.currentTemperature);
+  
   $( "#temperature-up" ).click(function( event ) {
-      alert( "It's getting warmer!" );
+      thermostat.up();
+      $('#temperature').text(thermostat.currentTemperature);
   });
   $( "#temperature-down" ).click(function( event ) {
-      alert( "It's getting cooler!" );
+      thermostat.down();
+      $('#temperature').text(thermostat.currentTemperature);
   });
 
   $("#temperature").css("color", "red")
@@ -11,5 +16,8 @@ $( document ).ready(function() {
   $("#powersaving-switch").click(function(event){
     $(this).css("color", "black")
   })
+
+  $( "#temperature")
+
  
  });
