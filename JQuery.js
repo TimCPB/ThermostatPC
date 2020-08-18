@@ -27,12 +27,17 @@ $( document ).ready(function() {
   $(".switch").click(function(event){
       thermostat.switchPowerSaveMode();
       event.preventDefault()
-      console.log(thermostat.powerSaveMode)
   })
 
   function updateTemperature(){
       $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
     }
+
+    $.get( "/users.php", {
+        userId: 1234
+    }, function( resp ) {
+        console.log( resp ); // server response
+    });
 
  });
 
