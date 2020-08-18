@@ -29,18 +29,20 @@ $( document ).ready(function() {
       event.preventDefault()
   })
 
-  $("#outsideTemp").text(
+  
   $.get("http://api.openweathermap.org/data/2.5/weather?q=London&appid=c2d102055ae8d191cb13bfd37d12059d", 
   function(data){
-     return (Math.floor(data.main.temp - 273.15))
+    $("#outsideTemp").text(Math.floor(data.main.temp - 273.15))
 }
-))
+)
 
   function updateTemperature(){
       $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
     }
 
+//  function getOutsideTemp(){
 
+//  }
 
  });
 
