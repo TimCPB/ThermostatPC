@@ -1,6 +1,9 @@
 body {
+  background-image: url("./images/glacier.jpg");
+  background-size: cover;
   text-align: center;
-  font-size: x-large; 
+  font-size: x-large;
+  color: #FFFFFF;
 }
 
 /* The switch - the box around the slider */
