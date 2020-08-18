@@ -29,15 +29,13 @@ $( document ).ready(function() {
       event.preventDefault()
   })
 
+  // $.get("http://api.openweathermap.org/data/2.5/weather?q=London&appid=c2d102055ae8d191cb13bfd37d12059d", function(data) { console.log(data.weather[0].description);})
+
   function updateTemperature(){
       $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
     }
 
-    $.get( "/users.php", {
-        userId: 1234
-    }, function( resp ) {
-        console.log( resp ); // server response
-    });
+
 
  });
 
