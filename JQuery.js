@@ -32,7 +32,7 @@ $( document ).ready(function() {
   
   $.get("http://api.openweathermap.org/data/2.5/weather?q=London&appid=c2d102055ae8d191cb13bfd37d12059d", 
   function(data){
-    $("#outsideTemp").text(Math.floor(data.main.temp - 273.15))
+    $("#outsideTemp").text(convertToCelsius(data.main.temp))
 }
 )
 
@@ -40,9 +40,9 @@ $( document ).ready(function() {
       $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
     }
 
-//  function getOutsideTemp(){
-
-//  }
+ function convertToCelsius(num){
+   return Math.floor(num - 273.15)
+ }
 
  });
 
