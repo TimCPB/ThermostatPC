@@ -26,14 +26,7 @@ $( document ).ready(function() {
 
   $(".switch").click(function(event){
       thermostat.switchPowerSaveMode();
-<<<<<<< HEAD
       event.preventDefault()
-=======
-      (thermostat.powerSaveMode).preventDefault()
-      console.log(thermostat.powerSaveMode)
-      // $(".switch").change()
-
->>>>>>> e41a172a1318cb23ffac8b5909d201ecaf92b59b
   })
 
   function updateTemperature(){
