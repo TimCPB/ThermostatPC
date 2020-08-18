@@ -26,25 +26,16 @@ $( document ).ready(function() {
 
   $(".switch").click(function(event){
       thermostat.switchPowerSaveMode();
-<<<<<<< HEAD
       event.preventDefault()
-=======
-      (thermostat.powerSaveMode).preventDefault()
-      console.log(thermostat.powerSaveMode)
-      // $(".switch").change()
-
->>>>>>> e41a172a1318cb23ffac8b5909d201ecaf92b59b
   })
+
+  // $.get("http://api.openweathermap.org/data/2.5/weather?q=London&appid=c2d102055ae8d191cb13bfd37d12059d", function(data) { console.log(data.weather[0].description);})
 
   function updateTemperature(){
       $('#temperature').text(thermostat.currentTemperature).css("color", thermostat.currentUsage())
     }
 
-    $.get( "/users.php", {
-        userId: 1234
-    }, function( resp ) {
-        console.log( resp ); // server response
-    });
+
 
  });
 
