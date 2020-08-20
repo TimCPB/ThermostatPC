@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
   // when switch is clicked turn the text colour blue.
 
-  $(".switch").click(function(event){
+  $(".switch").change(function(event){
       thermostat.switchPowerSaveMode();
       event.preventDefault()
   })
@@ -36,7 +36,7 @@ $( document ).ready(function() {
         event.preventDefault()
         $.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c2d102055ae8d191cb13bfd37d12059d`, 
         function(data){
-          $("#outsideTemp").text(convertToCelsius(data.main.temp))
+          $("#outsideTemp").text(`${city}: ` + convertToCelsius(data.main.temp))
       
       }
       )
